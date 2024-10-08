@@ -1,7 +1,5 @@
-import Image from "next/image";
-
-export default function Home() {
+export default function aboutMe() {
   return (
-    <div>Hello World</div>
+    <div>Hello World this is the quiz route</div>
   );
 }
