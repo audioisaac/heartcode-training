@@ -1,28 +1,6 @@
-import Link from "next/link";
-import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, navigationMenuTriggerStyle } from "../..compo";
-
-export function NavigationBar() {
+export default function Quiz() {
     return (
-        <NavigationMenu className="list-none h-16">
-            <NavigationMenuItem>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                        Home
-                    </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-                <Link href="/quiz" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                        Quiz
-                    </NavigationMenuLink>
-                </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-                <Link href="/about-me" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                        About me
-                    </NavigationMenuLink>
-                </Link>
-            </NavigationMenuItem>
-        </NavigationMenu>
-    )
-}
+      <div>Hello world this is the quiz route</div>
+    );
+  }
+  
