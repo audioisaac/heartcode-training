@@ -1,12 +1,20 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import isaacdrugs from "@/app/assets/isaacdrugs.jpeg";
+import { FlipWords } from "@/components/ui/flip-words";
+import { db } from "@/db/index";
+import { users } from "@/db/schema";
+
 
 export default function aboutMe() {
+  const words: string[] = ["coding", "university", "smoking"];
+
+  // insertOneUser();
   return (
+    
     <div className="flex justify-center gap-12 flex-wrap">
       <div className="flex flex-col justify-center">
-        <p className="text-md">You think coding is bad?</p>
+        <p className="text-md">You think<FlipWords words={words}/>is bad?</p>
         <p className="text-md">Check out DRUGS then</p>
         <hr></hr>
         <p className="text-md">Heck yeah drugs are HORRIBLE</p>

@@ -8,9 +8,11 @@ export function NavigationBar() {
         <NavigationMenu className="flex flex-row justify-between list-none min-w-full h-16 sticky top-0 p-5">
             <div className="flex flex-row">
                 <NavigationMenuItem>
+                    <Link href="/" legacyBehavior passHref>
                         <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                             Home
                         </NavigationMenuLink>
+                        </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <Link href="/quiz" legacyBehavior passHref>
