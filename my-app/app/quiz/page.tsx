@@ -10,6 +10,9 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { db } from "@/db/index";
 import { users } from "@/db/schema";
+import { DateRangePicker } from "@/components/ui/date-range-picker";
+import { cn } from "@/lib/utils";
+
 
 const FormSchema = z.object({
 	name: z.string({
@@ -23,6 +26,8 @@ const FormSchema = z.object({
     	required_error: "Please select an option"
 	})
 })
+
+
 
 export default function Quiz() {
 	const { toast } = useToast();
@@ -64,13 +69,34 @@ export default function Quiz() {
                     	</FormItem>
                 	)}
             	/>
+				<FormField
+                	control={form.control}
+                	name="name"
+                	render={({ field }) => (
+                    	<FormItem>
+                        	<FormLabel>Question 2:</FormLabel>
+                        	<FormDescription>Which days should we take drugs?</FormDescription>
+                            	<FormControl>
+								<DateRangePicker
+						onUpdate={(values) => console.log(values)}
+						initialDateFrom="2023-01-01"
+						initialDateTo="2023-12-31"
+						align="start"
+						locale="en-GB"
+						showCompare={false}
+					/>
+                            	</FormControl>
+                        	<FormMessage/>
+                    	</FormItem>
+                	)}
+            	/>
             	<FormField
                 	control={form.control}
                 	name="question1"
                 	render={({ field }) => (
                     	<FormItem>
-                        	<FormLabel>Question 2:</FormLabel>
-                        	<FormDescription>Do you sell drugs?</FormDescription>
+                        	<FormLabel>Question 3:</FormLabel>
+                        	<FormDescription>Do you sell drugs? (cuz i nid sum)</FormDescription>
                         	<Select onValueChange={field.onChange} defaultValue={field.value}>
                             	<FormControl>
                                 	<SelectTrigger>
@@ -79,10 +105,19 @@ export default function Quiz() {
                             	</FormControl>
                             	<SelectContent>
                                 	<SelectItem value="yes">Yes</SelectItem>
-                                	<SelectItem value="no">No</SelectItem>
+                                	<SelectItem value="no">Hell Yes</SelectItem>
                             	</SelectContent>
                         	</Select>
                         	<FormMessage/>
+                    	</FormItem>
+                	)}
+            	/>
+				<FormField
+                	control={form.control}
+                	name="name"
+                	render={({ field }) => (
+                    	<FormItem>
+                        	
                     	</FormItem>
                 	)}
             	/>
