@@ -88,7 +88,7 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
   );
 };
 
-export function AnimatedListDemo({
+function AnimatedListDemo({
   className,
 }: {
   className?: string;
