@@ -117,7 +117,7 @@ export default function aboutMe() {
     
     <div className="flex justify-center gap-12 flex-wrap">
       <div className="flex flex-col justify-center">
-        <p className="text-md">You think<FlipWords words={words}/>is bad?</p>
+        <div className="text-md">You think<FlipWords words={words}/>is bad?</div>
         <p className="text-md">Check out DRUGS then</p>
         <hr></hr>
         <p className="text-md">Heck yeah drugs are HORRIBLE</p>
