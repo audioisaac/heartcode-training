@@ -68,24 +68,24 @@ const reviews = [
 	);
   };
    
-  export function MarqueeDemoVertical() {
-	return (
-	  <div className="relative flex h-[500px] w-full flex-row items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
-		<Marquee pauseOnHover vertical className="[--duration:20s]">
-		  {firstRow.map((review) => (
-			<ReviewCard key={review.username} {...review} />
-		  ))}
-		</Marquee>
-		<Marquee reverse pauseOnHover vertical className="[--duration:20s]">
-		  {secondRow.map((review) => (
-			<ReviewCard key={review.username} {...review} />
-		  ))}
-		</Marquee>
-		<div className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-white dark:from-background"></div>
-		<div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white dark:from-background"></div>
-	  </div>
-	);
-  }
+//   export function MarqueeDemoVertical() {
+// 	return (
+// 	  <div className="relative flex h-[500px] w-full flex-row items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+// 		<Marquee pauseOnHover vertical className="[--duration:20s]">
+// 		  {firstRow.map((review) => (
+// 			<ReviewCard key={review.username} {...review} />
+// 		  ))}
+// 		</Marquee>
+// 		<Marquee reverse pauseOnHover vertical className="[--duration:20s]">
+// 		  {secondRow.map((review) => (
+// 			<ReviewCard key={review.username} {...review} />
+// 		  ))}
+// 		</Marquee>
+// 		<div className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-white dark:from-background"></div>
+// 		<div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white dark:from-background"></div>
+// 	  </div>
+// 	);
+//   }
 
 
 const Circle = forwardRef<
@@ -654,7 +654,6 @@ const AboutMe: NextPage = () => {
           </CardContent>
           <CardContent className="flex flex-row">
             <div className="flex flex-row">
-              <MarqueeDemoVertical />
             </div>
             <AnimatedBeamDemo />
           </CardContent>
