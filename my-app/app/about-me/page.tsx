@@ -1,13 +1,12 @@
 "use client";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import Image from "next/image";
-import darkseer from "@/app/assets/darkseer.jpg";
-import { DateRangePicker } from "@/components/ui/date-range-picker";
 import Marquee from "@/components/magicui/marquee";
 import { cn } from "@/lib/utils";
 import React, { forwardRef, useRef } from "react";
 import { AnimatedBeam } from "@/components/ui/animated-beam";
+import { NextPage } from 'next';
+
  
 
 const reviews = [
@@ -580,49 +579,89 @@ const Icons = {
   ),
 };
 
-export default function AboutMe() {
-  return (
-    <div>
-        <Card>
-            <CardHeader>
-                <CardTitle>
-                    Hello I am iz
-                </CardTitle>
-                <CardDescription>
-                    heartcode more like hard code
-                </CardDescription>
-            </CardHeader>
-            <CardContent className="flex flex-col">
-                <div className="flex flex-row gap-2">
-                    <p className="font-bold">
-                        Name: Isaac
-                    </p>
-                </div>
-                <div className="flex flex-row gap-2">
-                    <p className="font-bold">
-                        Major: Offence (taking drugs)
-                    </p>
-                </div>
-                <div className="flex flex-row gap-2">
-                    <p className="font-bold">
-                        Hobbies: Taking drugs
-                    </p>
-                </div>
-                <div className="flex flex-row gap-2">
-                    <p className="font-bold">
-                        Check out my drug reviews!
-                    </p>
-                </div>
-            </CardContent>
-            <CardContent className="flex flex-row">
-                <div className="flex flex-row">
-                    <MarqueeDemoVertical/>
-                </div>
-                    <AnimatedBeamDemo/>
-            </CardContent>
-                {/* <Image alt="funny picture" src={darkseer}/> */}
+// export default function AboutMe() {
+//   return (
+//     <div>
+//         <Card>
+//             <CardHeader>
+//                 <CardTitle>
+//                     Hello I am iz
+//                 </CardTitle>
+//                 <CardDescription>
+//                     heartcode more like hard code
+//                 </CardDescription>
+//             </CardHeader>
+//             <CardContent className="flex flex-col">
+//                 <div className="flex flex-row gap-2">
+//                     <p className="font-bold">
+//                         Name: Isaac
+//                     </p>
+//                 </div>
+//                 <div className="flex flex-row gap-2">
+//                     <p className="font-bold">
+//                         Major: Offence (taking drugs)
+//                     </p>
+//                 </div>
+//                 <div className="flex flex-row gap-2">
+//                     <p className="font-bold">
+//                         Hobbies: Taking drugs
+//                     </p>
+//                 </div>
+//                 <div className="flex flex-row gap-2">
+//                     <p className="font-bold">
+//                         Check out my drug reviews!
+//                     </p>
+//                 </div>
+//             </CardContent>
+//             <CardContent className="flex flex-row">
+//                 <div className="flex flex-row">
+//                     <MarqueeDemoVertical/>
+//                 </div>
+//                     <AnimatedBeamDemo/>
+//             </CardContent>
+//                 {/* <Image alt="funny picture" src={darkseer}/> */}
                 
+//         </Card>
+//     </div>
+//   );
+// }
+
+const AboutMe: NextPage = () => {
+    return (
+      <div>
+        <Card>
+          <CardHeader>
+            <CardTitle>
+              Hello, I am iz
+            </CardTitle>
+            <CardDescription>
+              heartcode more like hard code
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="flex flex-col">
+            <div className="flex flex-row gap-2">
+              <p className="font-bold">Name: Isaac</p>
+            </div>
+            <div className="flex flex-row gap-2">
+              <p className="font-bold">Major: Offence (taking drugs)</p>
+            </div>
+            <div className="flex flex-row gap-2">
+              <p className="font-bold">Hobbies: Taking drugs</p>
+            </div>
+            <div className="flex flex-row gap-2">
+              <p className="font-bold">Check out my drug reviews!</p>
+            </div>
+          </CardContent>
+          <CardContent className="flex flex-row">
+            <div className="flex flex-row">
+              <MarqueeDemoVertical />
+            </div>
+            <AnimatedBeamDemo />
+          </CardContent>
+          {/* <Image alt="funny picture" src={darkseer}/> */}
         </Card>
-    </div>
-  );
-}
+      </div>
+    );
+  };
+  
+  export default AboutMe;
